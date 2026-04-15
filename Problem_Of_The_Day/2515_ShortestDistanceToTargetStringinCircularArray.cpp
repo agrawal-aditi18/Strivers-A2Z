@@ -13,6 +13,7 @@ public:
             if (words[i] == target) {
                 int straightDist  = abs(i - startIndex);
                 int circularDist  = n - straightDist;
+                //approach: calculating the distance from forward too and from backward too for the same index element
 
                 result = min({result, straightDist, circularDist});
             }
@@ -30,6 +31,7 @@ public:
             if(words[i] == target){
                 flag = 1;
                 ans = min(ans, step);
+                //using step as count
             }
             i = (i + 1) % n;
         }
